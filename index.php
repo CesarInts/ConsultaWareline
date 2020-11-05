@@ -10,9 +10,13 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col">
-					Prontuario: <input id="cdPaciente" type="text" maxlength="7" onkeypress="return event.charCode >= 48 && event.charCode <= 57"></input>				
-					<button type="button" id="bt-busca" class="btn btn-secondary">Buscar</button>
-					<br><br>
+					<div class="input-group mb-3">
+						<input id="cdPaciente" class="form-control" placeholder="Digite o Número de Prontuário ou Nome do Paciente" 
+						aria-label="Recipient's username" aria-describedby="basic-addon2" type="text"></input>				
+						<div class="input-group-append">
+							<button type="button" id="bt-busca" class="btn btn-outline-secondary">Buscar</button>
+						</div>
+					</div>	
 				</div>				
 			</div>
 			<div class="row">
