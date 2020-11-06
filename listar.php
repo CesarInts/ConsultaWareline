@@ -39,9 +39,9 @@
 	}
 	
 	$result_ = "<table class='table table-sm table-hover table-bordered' id='tabela_evolucao'>
-			 <thead class='thead-dark'>
+			 <thead class='table-success'>
 			<tr>
-				<th colspan='4'class='text-left'><b>Evoluções de Enfermagem e Equipe Multi</b></th>
+				<th colspan='5'class='text-left'><b>Evoluções de Enfermagem e Equipe Multi</b></th>
 			</tr>
 			</thead>
 			<tr>
@@ -52,9 +52,9 @@
 				<th>Prontuário</th>
 			</tr>";
 	$result2_ = "<table class='table table-sm table-hover table-bordered' id='tabela_evolucao_med'>
-			 <thead class='thead-dark'>
+			 <thead class='table-success'>
 			<tr>
-				<th colspan='4' class='text-left'><b>Evoluções Médicas</b></th>
+				<th colspan='5' class='text-left'><b>Evoluções Médicas</b></th>
 			</tr>
 			</thead>
 			<tr>
@@ -65,9 +65,9 @@
 				<th>Prontuário</th>
 			</tr>";
 	$result3_ = "<table class='table table-sm table-hover table-bordered' id='tabela_evolucao_med'>
-			 <thead class='thead-dark'>
+			 <thead class='table-success'>
 			<tr>
-				<th colspan='4' class='text-left'><b>Anamnese</b></th>
+				<th colspan='5' class='text-left'><b>Anamnese</b></th>
 			</tr>
 			</thead>
 			<tr>

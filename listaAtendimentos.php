@@ -57,7 +57,7 @@
 		
 		$a = array(
 			'cod' => -1,
-			'msg' => 'Não existem prontuários para esse código de prontuário.'
+			'msg' => 'Não existem atendimentos para esse código de prontuário.'
 		);
 
 		$b = json_encode($a);
@@ -79,26 +79,21 @@
 		</div>
 		<div id="tabela1" >
 		<div class="table-responsive-sm">
-			<table class="table table-sm table-hover table-striped table-bordered">
-				<tr>
-					<th colspan="2">Prontuário: <b><span id="codigo_paciente"></span></b></th>
-					<th colspan="4">Nome: <b><span id="nome_paciente"></span></b></th>
+			<table class="table table-sm table-hover table-striped">
+				<tr class="table-success">
+					<th colspan="2" class = 'text-left'>Prontuário: <b><span id="codigo_paciente"></span></b></th>
+					<th colspan="7" class = 'text-left'>Nome: <b><span id="nome_paciente"></span></b></th>
 				</tr>
 				<tr>
 					<th>Atendimento</th>
-					<th>Convenio</th>
 					<th>Serviço</th>
 					<th>Especialidade</th>
 					<th>Diagnostico</th>
 					<th>CID Principal</th>
-					<th>Descrição do CID</th>
-					<th>Operador</th>
-					<th>Responsável</th>
 					<th>Origem</th>
 					<th>Guia</th>
 					<th>Motivo</th>
 					<th>CBO</th>
-					<th>Tipo de Transporte</th>
 				</tr>
 				<?php					
 
@@ -108,19 +103,14 @@
 					foreach($result as $registro){
 						echo "<tr>
 							<td class = 'pesquisaAtd'><a href='#'>".$registro["numeroatendimento"]."</a></td>
-							<td>".utf8_encode($registro["convenio"])."</td>
 							<td>".utf8_encode($registro["servico"])."</td>
 							<td>".utf8_encode($registro["especialidade"])."</td>
 							<td>".utf8_encode($registro["diagnostico"])."</td>
 							<td>".utf8_encode($registro["descrcidprin"])."</td>
-							<td>".utf8_encode($registro["descrciddesc"])."</td>
-							<td>".utf8_encode($registro["operador"])."</td>
-							<td>".utf8_encode($registro["nomeresp"])."</td>
 							<td>".utf8_encode($registro["nomeproven"])."</td>
 							<td>".utf8_encode($registro["guia"])."</td>
 							<td>".utf8_encode($registro["motivo"])."</td>
 							<td>".utf8_encode($registro["descricbo"])."</td>
-							<td>".utf8_encode($registro["tipotransporte"])."</td>
 						</tr>";
 					}
 					
