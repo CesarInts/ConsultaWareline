@@ -8,7 +8,7 @@
     $msg .="<table class='table table-hover table-striped'>";
     $msg .="    <thead>";
     $msg .="        <tr>";
-    $msg .="            <th>Prontuário</th>";
+    $msg .="            <th>Documento</th>";
     $msg .="            <th>Nome</th>";
     $msg .="            <th>Data de Nascimento</th>";
     $msg .="        </tr>";
@@ -18,11 +18,12 @@
                         //conecta ao BD
                         $con = pg_connect("host=186.226.71.179 port=5432 dbname=db1 user=TI password=informatica")or
                         die ("Não foi possível conectar ao servidor PostGreSQL");
-                        $sql = "select codpac, nomepac, datanasc
+                        $sql = "select distinct cadpac.codpac, cadpac.nomepac, cadpac.datanasc
                         from cadpac
+                        inner join arqatend ON arqatend.codpac = cadpac.codpac
                         where nomepac ilike '%{$parametro}%' 
-                        or CAST(codpac as VARCHAR) = '{$parametro}'
-                        order by nomepac
+                        or CAST(cadpac.codpac as VARCHAR) = '{$parametro}'
+                        order by cadpac.nomepac
                         limit 10;";
                         $resultado = pg_query($con, $sql );
                         //$con->desconectar();
@@ -75,14 +76,14 @@
 							var a = JSON.parse(resp);
 							
 							if (a.cod == -1){
-								$("#resultado").html('');
 								alert(a.msg);
 								return false;
 							}
-						}
-						$("#resultado").show();
-						$("#voltar").show();
-						$("#resultado").html(resp);
+						}else{
+                            $("#resultado").show();
+                            $("#voltar").show();
+                            $("#resultado").html(resp);
+                        }
 					})
 					.fail(function(jqXHR, textStatus, resp){
 						 alert(resp);

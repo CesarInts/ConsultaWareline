@@ -39,11 +39,12 @@
 	}
 	
 	$result_ = "<table class='table table-sm table-hover table-bordered' id='tabela_evolucao'>
-			 <thead class='table-success'>
+			<thead class='table-success'>
 			<tr>
-				<th colspan='5'class='text-left'><b>Evoluções de Enfermagem e Equipe Multi</b></th>
+				<th colspan='5'class='text-left'>Evoluções de Enfermagem e Equipe Multi</th>
 			</tr>
 			</thead>
+			<tbody>
 			<tr>
 				<th>Data Gravação</th>
 				<th>Cancelada ?</th>
@@ -54,9 +55,10 @@
 	$result2_ = "<table class='table table-sm table-hover table-bordered' id='tabela_evolucao_med'>
 			 <thead class='table-success'>
 			<tr>
-				<th colspan='5' class='text-left'><b>Evoluções Médicas</b></th>
+				<th colspan='5' class='text-left'>Evoluções Médicas</th>
 			</tr>
 			</thead>
+			<tbody>
 			<tr>
 				<th>Data Gravação</th>
 				<th>Cancelada ?</th>
@@ -65,11 +67,12 @@
 				<th>Prontuário</th>
 			</tr>";
 	$result3_ = "<table class='table table-sm table-hover table-bordered' id='tabela_evolucao_med'>
-			 <thead class='table-success'>
+			<thead class='table-success'>
 			<tr>
-				<th colspan='5' class='text-left'><b>Anamnese</b></th>
+				<th colspan='5' class='text-left' scope='col'>Anamnese</th>
 			</tr>
 			</thead>
+			<tbody>
 			<tr>
 				<th>Data Gravação</th>
 				<th>Cancelada ?</th>
@@ -105,7 +108,7 @@
 		
 	}
 	
-	$result3_ .= "</table>";
+	$result3_ .= "</tbody></table>";
 	if($result3){
 		echo $result3_;}
 		
@@ -137,7 +140,7 @@
 		
 	}
 	
-	$result_ .= "</table>";
+	$result_ .= "</tbody></table>";
 	
 	echo $result_;
 
@@ -169,7 +172,7 @@
 		
 	}
 	
-	$result2_ .= "</table>";
+	$result2_ .= "</tbody></table>";
 	
 	echo $result2_;
 	
