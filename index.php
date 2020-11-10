@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Atendimento</title>		
+		<title>Consulta Wareline</title>		
 		<!--<meta http-equiv="Content-Type" content="text/html">-->
 		<meta charset="utf-8">
 	</head>
