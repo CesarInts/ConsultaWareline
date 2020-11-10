@@ -2,6 +2,7 @@
 	<head>
 		<title>Consulta Wareline</title>		
 		<!--<meta http-equiv="Content-Type" content="text/html">-->
+		<link rel="sortcut icon" href="img/favicon.ico" type="image/x-icon" />
 		<meta charset="utf-8">
 	</head>
 	<link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
